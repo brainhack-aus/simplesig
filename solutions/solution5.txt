@@ -1,0 +1,15 @@
+import simplesig.analyse
+
+# set signal parameters
+duration = 15 # How long will our signal run for
+fs = 1000 # What sampling frequency should we use
+times = [2.5, 7.5, 12.5] # What times should the envelopes around the frequency specific signals be centred at?
+widths = [12, 12, 12] # How wide should our pulses be (in time)?
+frequencies = [3, 7, 11] # What frequencies should we embed in the signal?
+amplitudes = [1, 1, 1] # What amplitude should the pulses be?
+
+# create signal
+trace, t = create_signal(duration, fs, times, widths, frequencies, amplitudes)
+
+# plot signal
+plot_spectrogram(trace, fs)
