@@ -1,0 +1,5 @@
+# Create a line plot with our signal
+curve = hv.Curve((t, sig), 'Time (s)', 'Signal Amplitude')
+
+# Set some options for how our signal will be plotted and display the plot
+curve.opts(hv.opts.Curve(line_width=1, line_color='yellow', width=500))
