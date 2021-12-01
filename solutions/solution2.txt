@@ -1,0 +1,2 @@
+pulses = [signal.gausspulse(t-pt, fc=f, bw=1/(f * w / 2)) * amp
+          for pt, w, f, amp in zip(times, widths, frequencies, amplitudes)]

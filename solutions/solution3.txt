@@ -1,0 +1,1 @@
+sig = np.stack(pulses).sum(axis=0)
