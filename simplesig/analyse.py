@@ -48,7 +48,7 @@ def plot_spectrogram(trace, fs):
     freqs, psd = signal.welch(trace, fs=fs, nperseg=fs*5, scaling='density')
     f, t, spec = signal.spectrogram(trace, fs, nperseg=fs, scaling='density')
     plot_opts = (
-        opts.Curve(frame_width=100, frame_height=400, yaxis=None,
+        opts.Curve(frame_width=100, frame_height=400, xticks=3, yaxis=None,
                    ylim=(1, 50)),
         opts.QuadMesh(frame_width=600, frame_height=400, ylim=(1, 50),
                       cmap='plasma')
